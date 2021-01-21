@@ -1,0 +1,70 @@
+@charset 'utf-8';
+
+@import 'globals-default';
+@import 'globals-collecting';
+@import 'settings';
+
+// Collecting Together Settings
+
+$header-font-family: 'Bagnard', sans-serif;
+
+$topbar-background: #fff;
+
+@import 'foundation-core';
+@import 'omeka';
+
+.button,
+a.button,
+button,
+[type="submit"] {
+  font-family: $header-font-family;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: underline;
+  
+  &:hover,
+  &:active {
+    text-decoration: none;
+    background-color: $secondary-color;
+  }
+}
+
+.menu .active > a {
+  background-color: transparent;
+  text-decoration: underline;
+  color: $primary-color;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  
+  &:before {
+    content: "";
+    background: url('../img/trianglepattern.jpg');
+    background-size: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .4;
+  }
+}
+
+header {
+  border-bottom: 3px solid $primary-color;
+  margin-bottom: 4 * $global-margin;
+}
+
+#content {
+  background-color: #fff;
+}
+
+.toc-block {
+  background-color: transparent;
+  font-family: $header-font-family;
+}

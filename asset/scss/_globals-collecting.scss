@@ -1,0 +1,20 @@
+@import "util/util";
+@import url('//fonts.googleapis.com/css2?family=Karla:ital,wght@0,500;0,800;1,500;1,800&display=swap');
+
+@font-face {
+    font-family: 'bagnard_regularregular';
+    src: url('../fonts/bagnardsans-webfont.woff2') format('woff2'),
+         url('../fonts/bagnardsans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$foundation-palette: (
+  primary: #3b478f,
+  secondary: #c9cff5,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+);
+$global-font-size: 15px;
+$body-font-family: 'Karla', sans-serif;

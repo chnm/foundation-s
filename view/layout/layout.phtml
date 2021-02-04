@@ -51,15 +51,51 @@ endif;
             <header>
                 <?php echo $this->partial('common/header-dropdown'); ?>
             </header>
+            <div class="grid-container">           
+                <div class="grid-x grid-margin-x">
+                    <div class="medium-12 cell">
+                        <?php if ($this->themeSetting('logo')): ?>
+                        <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
+                        <?php else: ?>
+                        <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
             <div id="content" role="main">
                 <?php echo $this->content; ?>
             </div>
             <footer>
+                <div class="grid-x grid-margin-x">
+                <?php if ($footerLogoOne = $this->themeSettingAssetUrl('footer_logo_one')): ?>
+                    <div class="cell auto">
+                        <img src="<?php echo $this->escapeHtml($footerLogoOne); ?>">
+                    </div>
+                <?php endif; ?>
+                <?php if ($footerLogoTwo = $this->themeSettingAssetUrl('footer_logo_two')): ?>
+                    <div class="cell auto">
+                        <img src="<?php echo $this->escapeHtml($footerLogoTwo); ?>">
+                    </div>
+                <?php endif; ?>
+                <?php if ($footerLogoThree = $this->themeSettingAssetUrl('footer_logo_three')): ?>
+                    <div class="cell auto">
+                        <img src="<?php echo $this->escapeHtml($footerLogoThree); ?>">
+                    </div>
+                <?php endif; ?>
+                <?php if ($footerLogoFour = $this->themeSettingAssetUrl('footer_logo_four')): ?>
+                    <div class="cell auto">
+                        <img src="<?php echo $this->escapeHtml($footerLogoFour); ?>">
+                    </div>
+                <?php endif; ?>
+
+                <div class="cell small-12">
                 <?php if ($footerContent = $this->themeSetting('footer')): ?>
-                <?php echo $footerContent; ?>
+                    <?php echo $footerContent; ?>
                 <?php else: ?>
                     <?php echo $this->translate('Powered by Omeka S'); ?>
                 <?php endif; ?>
+                </div>
+                </div>
             </footer>
         </div>
         <script>

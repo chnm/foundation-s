@@ -773,7 +773,7 @@ body.vertical-menu footer {
 }
 
 .blocks {
-  @include xy-cell(12);
+  @include xy-cell(9);
 }
 
 .blocks > h2:first-child {

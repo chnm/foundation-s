@@ -45,7 +45,7 @@ body {
     content: "";
     background: url('../img/trianglepattern.jpg');
     background-size: 70px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -58,6 +58,20 @@ body {
 header {
   border-bottom: 3px solid $primary-color;
   margin-bottom: 4 * $global-margin;
+}
+
+a.site-title {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: $global-margin;
+  
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.site-title h1 {
+  font-size: 3 * $global-font-size;
 }
 
 #content {

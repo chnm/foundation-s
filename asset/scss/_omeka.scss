@@ -596,14 +596,7 @@ body.vertical-menu footer {
 
 .resource.show .media-embeds,
 .resource.show .media-list {
-  order: 2;
-  @include xy-cell(4);
-  margin-right: 0;
-  
-  @include breakpoint(medium down) {
-    width: 100%;
-    margin-left: 0;
-  }
+  @include xy-cell(12);
 }
 
 .resource.show .media-render > a:only-child {
@@ -671,8 +664,6 @@ body.vertical-menu footer {
 
 .media-list img {
   margin: 0 $global-margin 0 0;
-  height: 5 * $global-padding;
-  width: auto;
 }
 
 .inline .property {

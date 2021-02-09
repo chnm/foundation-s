@@ -12,6 +12,13 @@ $showLayout = $this->themeSetting('show_layout');
 <h3 class="label"><?php echo $translate('Item'); ?></h3>
 </div>
 
+<?php if($item->resourceClass() && $item->resourceClass()->id() == 24): ?>
+    <h2>This Works</h2>
+    <?php else: ?>
+        <h2>This Also Works</h2>
+ <?php endif; ?>
+
+
 <div class="grid-x">
 
 <?php if ($embedMedia && $itemMedia): ?>
@@ -25,7 +32,7 @@ endforeach;
 <?php if (!$embedMedia && $itemMedia): ?>
 <div class="media-list">
     <?php foreach ($itemMedia as $media): ?>
-        <?php echo $media->linkPretty(); ?>
+        <?php echo $media->render(); ?>
     <?php endforeach; ?>
 </div>
 <?php endif; ?>

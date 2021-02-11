@@ -23,6 +23,11 @@ button,
   &:hover {
     color: $primary-color;
   }
+  
+  &:before {
+    display: inline-block;
+    margin-right: .25 * $global-margin;
+  }
 }
 
 a.button {
@@ -171,4 +176,27 @@ a.site-title {
 #collecting-together-projects .links a:before {
   display: inline-block;
   margin-right: .25 * $global-margin;
+}
+
+.resource.show .institution {
+  margin-bottom: 0;
+}
+
+.resource.show .property {
+  margin-bottom: $global-margin;
+}
+
+.resource.show .property h4 {
+  font-size: 1.125 * $global-font-size;
+  margin-bottom: 0;
+}
+
+.resource.show .resource-link {
+  display: inline-flex;
+}
+
+.item.show .institution img {
+  height: 3 * $global-padding;
+  width: auto;
+  margin-right: .5 * $global-margin;
 }

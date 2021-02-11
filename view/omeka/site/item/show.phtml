@@ -6,130 +6,79 @@ $embedMedia = $this->siteSetting('item_media_embed', false);
 $itemMedia = $item->media();
 $showLayout = $this->themeSetting('show_layout');
 
-$description = $item->displayDescription();
-$institutions = $item->value('mare:originatingInstitution',['all' => true]);
-$types = $item->value('dcterms:type',['all' => true]);
-$categories = $item->value('mare:categoricalFocus',['all' => true]);
-$placeNames = $item->value('mare:populatedPlaceName',['all' => true]);
-$stateNames = $item->value('mare:stateTerritoryName',['all' => true]);
-$countries = $item->value('mare:countryName',['all' => true]);
-$geographicalFocuses = $item->value('mare:geographicalFocus',['all' => true]);
-$materialFocuses = $item->value('mare:materialFocus',['all' => true]);
-$accrualMethods = $item->value('dcterms:accrualMethod',['all' => true]);
+$customMetadata = [
+    'Types' => $item->value('dcterms:type',['all' => true]),
+    'Categories' => $item->value('mare:categoricalFocus',['all' => true]),
+    'Places' => $item->value('mare:populatedPlaceName',['all' => true]),
+    'States' => $item->value('mare:stateTerritoryName',['all' => true]),
+    'Countries' => $item->value('mare:countryName',['all' => true]),
+    'Geographic Focus' => $item->value('mare:geographicalFocus',['all' => true]),
+    'Material Focus' => $item->value('mare:materialFocus',['all' => true]),
+    'Accrual Method' => $item->value('dcterms:accrualMethod',['all' => true]),
+]
 ?>
 
-
-
+<!-- Metadata for a collecting project. -->
 <?php if($item->resourceClass() && $item->resourceClass()->id() == 133): ?>
 
     <div class="grid-x grid-padding-x">
         <div class="resource-title cell medium-12">
             <?php echo $this->pageTitle($item->displayTitle(), 2); ?>
         </div>
+        <?php if (count($itemMedia) > 0): ?>
         <div class="cell medium-3">
             <?php foreach ($itemMedia as $media): ?>
                 <?php echo $media->render(); ?>
             <?php endforeach; ?>
         </div>
+        <?php endif; ?>
         <div class="cell medium-9">
-            <?php if($description): ?>
-                <p><?php echo $item->displayDescription(); ?></p>
+            <?php if(($description = $item->displayDescription()) && ($description !== '')): ?>
+                <p><?php echo $description; ?></p>
             <?php endif; ?>
 
-            <?php if($institutions): ?>
+            <?php if($institutions = $item->value('mare:originatingInstitution',['all' => true])): ?>
                 <?php foreach($institutions as $institution): ?>
-                    <p class="institution"><?php echo $institution; ?></p>
+                    <?php if ($institutionResource = $institution->valueResource()): ?>
+                    <p class="institution"><?php echo $institutionResource->linkPretty('medium'); ?></p>
+                    <?php else: ?>
+                    <p class="institution"><?php echo $institution->asHtml(); ?></p>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
 
             <?php if( $item->value('mare:collectingUrl')): ?>
-                <?php echo $this->hyperlink('Contribute to This Project', $item->value('mare:collectingUrl')->uri(),['class' => 'button']); ?>
+                <?php echo $this->hyperlink('Contribute to This Project', $item->value('mare:collectingUrl')->uri(),[
+                  'class' => 'o-icon-external button',
+                  'aria-label' => 'External',
+                ]); ?>
             <?php endif; ?>
 
             <?php if ($item->value('mare:collectionUrl')): ?>
-                <?php echo $this->hyperlink('Learn More', $item->value('mare:collectionUrl')->uri()); ?>
+                <?php echo $this->hyperlink('Project Website', $item->value('mare:collectionUrl')->uri(), [ 
+                      'class' => 'o-icon-external button',
+                      'aria-label' => 'External',
+                ]); ?>
             <?php endif; ?>
 
+            <?php foreach ($customMetadata as $key => $values): ?>
+            <?php if ((count($values) > 0)): ?>
             <div class="property">
-                <h4></h4>
-                <div class="values"></div>
+                <h4><?php echo $key; ?></h4>
+                <div class="values">
+                <?php foreach($values as $value): ?>
+                    <div class="value"><?php echo $value; ?></div>
+                <?php endforeach; ?>
+                </div>
             </div>
-
-            <?php if($types): ?>
-                <div class="property">
-                    <h4>Type</h4>
-                    <?php foreach ($types as $type): ?>
-                        <div class="values"><?php echo $type; ?></div>
-                    <?php endforeach; ?>
-                </div>
             <?php endif; ?>
-
-            <?php if($categories): ?>
-                <div class="property">
-                    <h4>Categorical Focus</h4>
-                    <?php foreach($categories as $category): ?>
-                        <div class="values"><?php echo $category; ?></div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if($placeNames): ?>
-                <div class="property">
-                    <h4>Place Name</h4>
-                    <?php foreach($placeNames as $placeName): ?>
-                        <div class="values"><?php echo $placeName; ?></div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if($stateNames): ?>
-                <div class="property">
-                    <h4>State or Territory</h4>
-                    <?php foreach($stateNames as $stateName): ?>
-                        <div class="values"><?php echo $stateName; ?></div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if($countries): ?>
-                <div class="property">
-                    <h4>Country</h4>
-                    <?php foreach($countries as $country): ?>
-                        <div class="values"><?php echo $country; ?></div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if($geographicalFocuses): ?>
-                <div class="property">
-                    <h4>Geographical Focus</h4>
-                    <?php foreach($geographicalFocuses as $geographicalFocus): ?>
-                        <div class="values"><?php echo $geographicalFocus; ?></div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if($materialFocuses): ?>
-                <div class="property">
-                    <h4>Geographical Focus</h4>
-                    <?php foreach($materialFocuses as $materialFocus): ?>
-                        <div class="values"><?php echo $materialFocus; ?></div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if($accrualMethods): ?>
-                <div class="property">
-                    <h4>Geographical Focus</h4>
-                    <?php foreach($accrualMethods as $accrualMethod): ?>
-                        <div class="values"><?php echo $accrualMethod; ?></div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>          
+            <?php endforeach; ?>
         </div>
     </div>
+    
 
 <?php else: ?>
+<!-- Metadata for everything else. -->
 <div class="grid-x grid-padding-x">
 
     <div class="resource-title cell medium-12">

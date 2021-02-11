@@ -124,7 +124,7 @@ a.site-title {
 #collecting-together-projects {
   width: 70%;
   float: right;
-  padding-left: $global-padding;
+  padding: 0 $global-padding;
   margin-top: $global-margin;
 }
 
@@ -137,23 +137,30 @@ a.site-title {
   margin-bottom: $global-margin;
 }
 
-#collecting-together-projects ul {
-  list-style: none;
-  margin-left: 0;
-}
-
-#collecting-together-projects li {
-  margin-bottom: $global-margin;
+#collecting-together-projects .project {
+  margin-bottom: 2 * $global-margin;
   overflow: hidden;
 }
 
 #collecting-together-projects .title {
   font-size: 1.5 * $global-font-size;
   font-weight: bold;
+  margin-bottom: 0;
+}
+
+#collecting-together-projects .institution, 
+#collecting-together-projects .description {
+  margin-bottom: 0;
+}
+
+#collecting-together-projects .project-meta {
+  width: 75%;
 }
 
 #collecting-together-projects .logo {
   float: right;
+  width: 25%;
+  text-align: center;
 }
 
 #collecting-together-projects .logo img {

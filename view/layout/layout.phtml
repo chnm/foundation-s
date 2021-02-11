@@ -52,15 +52,11 @@ endif;
                 <?php echo $this->partial('common/header-dropdown'); ?>
             </header>
             <div class="grid-container">           
-                <div class="grid-x grid-margin-x">
-                    <div class="medium-12 cell">
-                        <?php if ($this->themeSetting('logo')): ?>
-                        <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
-                        <?php else: ?>
-                        <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
-                        <?php endif; ?>
-                    </div>
-                </div>
+                <?php if ($this->themeSetting('logo')): ?>
+                <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
+                <?php else: ?>
+                <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
+                <?php endif; ?>
             </div>
             <div id="content" role="main">
                 <?php echo $this->content; ?>

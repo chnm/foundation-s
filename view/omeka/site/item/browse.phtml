@@ -51,6 +51,10 @@ $sortHeadings = [
     <?php echo $this->pageTitle($translate('Items'), 2); ?>
 <?php endif; ?>
 
+<?php if($this->themeSetting('browseExplainer')): ?>
+    <p class="browse-explainer"><?php echo $this->themeSetting('browseExplainer'); ?></p>
+<?php endif; ?>
+
 <?php echo $this->searchFilters(); ?>
 <div class="browse-control-mobile">
 <button type="button" class="browse-toggle closed"><?php echo $translate('Options'); ?></button>

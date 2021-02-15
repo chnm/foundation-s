@@ -55,7 +55,12 @@ endif;
                 <?php if ($this->themeSetting('logo')): ?>
                 <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
                 <?php else: ?>
-                <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
+                <a href="<?php echo $site->url(); ?>" class="site-title">
+                    <?php echo $this->pageTitle($site->title()); ?>
+                    <?php if($this->themeSetting('subtitle')): ?>
+                        <span class="subtitle"><?php echo $this->themeSetting('subtitle'); ?></span>
+                    <?php endif; ?>
+                </a>
                 <?php endif; ?>
             </div>
             <div id="content" role="main">

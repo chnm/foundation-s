@@ -1,0 +1,10 @@
+<?php if ($this->themeSetting('logo')): ?>
+<a href="<?php echo $siteUrl; ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="<?php echo $siteTitle; ?> logo"></a>
+<?php else: ?>
+<a href="<?php echo $siteUrl; ?>" class="site-title">
+    <?php echo $this->pageTitle($siteTitle); ?>
+    <?php if($this->themeSetting('subtitle')): ?>
+        <span class="subtitle"><?php echo $this->themeSetting('subtitle'); ?></span>
+    <?php endif; ?>
+</a>
+<?php endif; ?>

@@ -14,9 +14,12 @@ $this->headScript()->prependFile('//cdn.jsdelivr.net/npm/foundation-sites@6.5.3/
 ]);
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
+$this->headScript()->appendFile($this->assetUrl('js/collecting-form.js'));
 $this->trigger('view.layout');
 $title = $this->pageTitle($site->title());
 $userBar = $this->userBar();
+$siteUrl = $site->url();
+$siteTitle = $site->title();
 
 if ($userBar) {
   $this->htmlElement('body')->appendAttribute('class', 'user-bar');
@@ -49,19 +52,10 @@ endif;
             <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
             <?php echo $userBar; ?>
             <header>
-                <?php echo $this->partial('common/header-dropdown'); ?>
+                <?php echo $this->partial('common/header-dropdown', ['site' => $site, 'siteUrl' => $siteUrl, 'siteTitle' => $siteTitle]); ?>
             </header>
             <div class="grid-container">           
-                <?php if ($this->themeSetting('logo')): ?>
-                <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
-                <?php else: ?>
-                <a href="<?php echo $site->url(); ?>" class="site-title">
-                    <?php echo $this->pageTitle($site->title()); ?>
-                    <?php if($this->themeSetting('subtitle')): ?>
-                        <span class="subtitle"><?php echo $this->themeSetting('subtitle'); ?></span>
-                    <?php endif; ?>
-                </a>
-                <?php endif; ?>
+                <?php echo $this->partial('common/site-title', ['siteUrl' => $siteUrl, 'siteTitle' => $siteTitle]); ?>
             </div>
             <div id="content" role="main">
                 <?php echo $this->content; ?>

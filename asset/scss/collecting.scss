@@ -72,6 +72,10 @@ body {
 header {
   border-bottom: 3px solid $primary-color;
   margin-bottom: 4 * $global-margin;
+  
+  @include breakpoint(medium down) {
+    margin-bottom: $global-margin;
+  }
 }
 
 a.site-title {
@@ -92,8 +96,48 @@ a.site-title {
   margin-bottom: 0;
 }
 
+.top-bar-left .contribute.button {
+  @include show-for(large);
+}
+
+.grid-container > .site-title {
+  @include show-for(large);
+}
+
+#responsive-menu .contribute.button {
+  @include hide-for(large);
+}
+
+.top-bar-left a.site-title {
+  @include hide-for(large);
+  margin-bottom: 0;
+}
+
+.top-bar-left a.site-title h1 {
+  font-size: 1.25 * $global-font-size;
+}
+
 #content {
   background-color: #fff;
+  
+}
+
+@include breakpoint(medium down) {
+  body:not(.browse) #content,
+  #content {
+    margin: 2 * $global-margin;
+    padding: $global-padding;
+  }
+  
+  .title-bar {
+    display: inline-flex;
+  }
+} 
+
+@include breakpoint(small) {
+  #blocks {
+    margin: 0;
+  }
 }
 
 .toc-block {
@@ -105,17 +149,26 @@ a.site-title {
   width: 100%;
 }
 
-.find-a-collecting-project #blocks > p {
-  max-width: 75%;
-}
+@include breakpoint(large) {
+  .find-a-collecting-project #blocks > p {
+    max-width: 75%;
+  }
 
-#collecting-together-form {
-  width: 30%;
-  float: left;
-  margin-top: $global-margin;
-  padding-right: $global-padding;
-  position: sticky;
-  top: $global-margin;
+  #collecting-together-form {
+    width: 30%;
+    float: left;
+    margin-top: $global-margin;
+    padding-right: $global-padding;
+    position: sticky;
+    top: $global-margin;
+  }
+  
+  #collecting-together-projects {
+    width: 70%;
+    float: right;
+    padding: 0 $global-padding;
+    margin-top: $global-margin;
+  }  
 }
 
 #collecting-together-form label {
@@ -124,13 +177,6 @@ a.site-title {
 
 #collecting-together-form select {
   max-width: 100%;
-}
-
-#collecting-together-projects {
-  width: 70%;
-  float: right;
-  padding: 0 $global-padding;
-  margin-top: $global-margin;
 }
 
 .results-copy {
@@ -147,6 +193,14 @@ a.site-title {
   overflow: hidden;
 }
 
+@include breakpoint(small) {
+  #collecting-together-projects .project {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: $global-margin;
+    padding-bottom: $global-margin;
+  }
+}
+
 #collecting-together-projects .title {
   font-size: 1.5 * $global-font-size;
   font-weight: bold;
@@ -158,14 +212,44 @@ a.site-title {
   margin-bottom: 0;
 }
 
-#collecting-together-projects .project-meta {
-  width: 75%;
+
+@include breakpoint(medium up) {
+  #collecting-together-projects .project-meta {
+    width: 75%;
+  }
+  
+  #collecting-together-projects .logo {
+    float: right;
+    width: 25%;
+    text-align: center;
+  }  
 }
 
-#collecting-together-projects .logo {
-  float: right;
-  width: 25%;
-  text-align: center;
+.toggle-form.button {
+  @include hide-for(large);
+  width: 100%;
+}
+
+@include breakpoint(medium down) {
+  #collecting-together-form {
+    display: none;
+  }
+  
+  #collecting-together-form.show {
+    display: block;
+    border: 1px solid #ddd;
+    padding: $global-padding;
+    margin-bottom: $global-margin;
+    margin-top: -1 * $global-margin;
+  }
+  
+  #collecting-together-form .field {
+    margin-bottom: .5 * $global-margin;
+  }
+  
+  #collecting-together-form label {
+    font-weight: bold;
+  }
 }
 
 #collecting-together-projects .logo img {

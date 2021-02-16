@@ -2,10 +2,11 @@
     <nav class="top-bar-left">
         <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
             <button class="menu-toggle" type="button" data-toggle="offCanvas" aria-label="<?php echo $this->translate('Menu'); ?>"><i class="fas fa-bars"></i></button>
+            <?php echo $this->partial('common/site-title', ['siteUrl' => $siteUrl, 'siteTitle' => $siteTitle]); ?>
         </div>
-        <a href="<?php echo $site->siteUrl(); ?>/page/find-a-collecting-project" class="contribute button">Find a project to contibute to here!</a>
+        <a href="<?php echo $siteUrl; ?>/page/find-a-collecting-project" class="contribute button">Find a project to contibute to here!</a>
     </nav>
     <div class="top-bar-right" id="responsive-menu">
-        <?php echo $site->publicNav()->menu()->setPartial('common/foundation-navigation.phtml')->renderPartialWithParams(['layout' => 'dropdown']); ?>
+        <?php echo $site->publicNav()->menu()->setPartial('common/foundation-navigation.phtml')->renderPartialWithParams(['layout' => 'dropdown', 'siteUrl' => $siteUrl]); ?>
     </div>
 </div>

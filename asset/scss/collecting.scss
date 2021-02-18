@@ -147,6 +147,10 @@ a.site-title {
   }
 }
 
+.home #blocks {
+  margin:inherit;
+}
+
 .toc-block {
   background-color: transparent;
   font-family: $header-font-family;
@@ -306,4 +310,25 @@ a.site-title {
 .home .preview-block h4,
 .home .item-showcase h3 {
   font-size: 1.25 * $global-font-size;
+}
+
+.callout {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 20px,
+    $button-background-hover 20px,
+    $button-background-hover 21px
+  );
+  text-align: center;
+
+  p {
+    font-size: 2rem;
+  }
+  
+  .button {
+    font-variant: small-caps;
+    @include xy-cell-offset(2);
+    @include xy-cell(8);
+  }
 }

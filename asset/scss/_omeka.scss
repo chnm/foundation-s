@@ -767,6 +767,11 @@ body.vertical-menu footer {
   @include xy-cell(9);
 }
 
+.home .blocks {
+  @include xy-cell-offset(1);
+  @include xy-cell(10);
+}
+
 .blocks > h2:first-child {
   margin-bottom: (2 * $global-margin);
 }

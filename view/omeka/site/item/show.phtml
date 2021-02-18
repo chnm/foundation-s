@@ -94,8 +94,8 @@ $customMetadata = [
     <div class="cell medium-9">
         <?php $itemSets = $item->itemSets(); ?>
             <?php foreach($itemSets as $itemSet): ?>
-            <?php if($itemSet->resourceClass() && $itemSet->resourceClass()->id() == 133): ?>
-                 <p>This item originates from <a href="<?php echo $itemSet->value('mare:collectionUrl'); ?>"><?php echo $itemSet->value('dcterms:title'); ?></a></p>
+            <?php if($itemSet->resourceClass() && $itemSet->resourceClass()->id() == 114): ?>
+                 <p>This item originates from <a href="<?php echo $itemSet->value('mare:collectionUrl')->uri(); ?>"><?php echo $itemSet->value('mare:collectionUrl'); ?></a></p>
             <?php endif; ?>
             <?php endforeach; ?>
         <?php $this->trigger('view.show.before'); ?>

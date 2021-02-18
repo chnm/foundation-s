@@ -302,3 +302,8 @@ a.site-title {
   width: auto;
   margin-right: .5 * $global-margin;
 }
+
+.home .preview-block h4,
+.home .item-showcase h3 {
+  font-size: 1.25 * $global-font-size;
+}

@@ -95,7 +95,7 @@ $customMetadata = [
         <?php $itemSets = $item->itemSets(); ?>
             <?php foreach($itemSets as $itemSet): ?>
             <?php if($itemSet->resourceClass() && $itemSet->resourceClass()->id() == 133): ?>
-                 <p>This item originates from <a href="<?php echo $itemSet->value('mare:collectionUrl')->uri(); ?>"><?php echo $itemSet->value('mare:collectionUrl'); ?></a></p>
+                 <p>This item originates from <a href="<?php echo $itemSet->value('mare:collectionUrl')->uri(); ?>"><?php echo $itemSet->value('mare:collectionUrl'); ?></a>.</p>
             <?php endif; ?>
             <?php endforeach; ?>
         <?php $this->trigger('view.show.before'); ?>

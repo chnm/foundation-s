@@ -90,6 +90,12 @@ a.site-title {
 
 .site-title h1 {
   font-size: 3 * $global-font-size;
+  line-height: 1; 
+}
+
+.subtitle {
+  font-size: 1.25 * $global-font-size;
+  @include show-for(large);
 }
 
 .contribute.button {
@@ -228,6 +234,17 @@ a.site-title {
 .toggle-form.button {
   @include hide-for(large);
   width: 100%;
+  
+  &:after {
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: .5 * $global-margin;
+  }
+  
+  &.open:after {
+    content: "\f0d7";
+  }
 }
 
 @include breakpoint(medium down) {

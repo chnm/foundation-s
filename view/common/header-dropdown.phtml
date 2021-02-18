@@ -4,11 +4,7 @@
             <button class="menu-toggle" type="button" data-toggle="offCanvas" aria-label="<?php echo $this->translate('Menu'); ?>"><i class="fas fa-bars"></i></button>
             <?php echo $this->partial('common/site-title', ['siteUrl' => $siteUrl, 'siteTitle' => $siteTitle]); ?>
         </div>
-<<<<<<< HEAD
         <a href="<?php echo $site->siteUrl(); ?>/page/find-a-collecting-project" class="contribute button">Find a project to contribute to here!</a>
-=======
-        <a href="<?php echo $siteUrl; ?>/page/find-a-collecting-project" class="contribute button">Find a project to contibute to here!</a>
->>>>>>> ef1a967c7eee409355f66ef1043af2241844cb41
     </nav>
     <div class="top-bar-right" id="responsive-menu">
         <?php echo $site->publicNav()->menu()->setPartial('common/foundation-navigation.phtml')->renderPartialWithParams(['layout' => 'dropdown', 'siteUrl' => $siteUrl]); ?>

@@ -772,6 +772,11 @@ body.vertical-menu footer {
   @include xy-cell(10);
 }
 
+.home .item.resource {
+  @include xy-cell(3);
+  padding-top:1rem;
+}
+
 .blocks > h2:first-child {
   margin-bottom: (2 * $global-margin);
 }
@@ -834,6 +839,7 @@ body.vertical-menu footer {
 
 .item-showcase {
   text-align: center;
+  @include xy-grid;
 }
 
 .site-page-pagination {

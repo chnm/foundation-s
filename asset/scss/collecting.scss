@@ -141,14 +141,14 @@ a.site-title {
   }
 } 
 
+.home #blocks {
+  margin:inherit;
+}
+
 @include breakpoint(small) {
   #blocks {
     margin: 0;
   }
-}
-
-.home #blocks {
-  margin:inherit;
 }
 
 .toc-block {
@@ -307,7 +307,7 @@ a.site-title {
   margin-right: .5 * $global-margin;
 }
 
-.home .preview-block h4,
+.preview-block h4,
 .home .item-showcase h3 {
   font-size: 1.25 * $global-font-size;
 }
@@ -325,10 +325,18 @@ a.site-title {
   p {
     font-size: 2rem;
   }
-  
+
   .button {
     font-variant: small-caps;
     @include xy-cell-offset(2);
     @include xy-cell(8);
   }
+}
+
+.home .callout button {
+  font-size: 1.25 * $global-font-size;
+}
+
+.home .item-showcase {
+  margin: (2 * $global-margin) (-1 * $global-margin);
 }

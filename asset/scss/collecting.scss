@@ -284,6 +284,10 @@ a.site-title {
   margin-right: .25 * $global-margin;
 }
 
+.resource.show .grid-x {
+  flex-direction: row-reverse;
+}
+
 .resource.show .institution {
   margin-bottom: 0;
 }

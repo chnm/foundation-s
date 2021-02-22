@@ -774,9 +774,6 @@ body.vertical-menu footer {
 
 .home .item.resource {
   padding-top:1rem;
-  @include breakpoint(medium) {
-    @include xy-cell(3);
-  }
 }
 
 .blocks > h2:first-child {

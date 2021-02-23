@@ -40,9 +40,7 @@ $customMetadata = [
             <?php if($institutions = $item->value('mare:originatingInstitution',['all' => true])): ?>
                 <?php foreach($institutions as $institution): ?>
                     <?php if ($institutionResource = $institution->valueResource()): ?>
-                    <p class="institution"><?php echo $institutionResource->linkPretty('fullsize'); ?></p>
-                    <?php else: ?>
-                    <p class="institution"><?php echo $institution->asHtml(); ?></p>
+                    <p class="institution"><?php echo $institutionResource->linkRaw($this->thumbnail($institutionResource, 'large', ['title' => $institutionResource->displayTitle()])); ?></p>
                     <?php endif; ?>
                 <?php endforeach; ?>
             <?php endif; ?>

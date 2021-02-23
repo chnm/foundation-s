@@ -348,6 +348,7 @@ a.site-title {
 
 .home .item-showcase {
   margin: (2 * $global-margin) (-1 * $global-margin);
+  align-items: center;
 }
 
 .item-showcase .resource.item:not(:only-child) img {

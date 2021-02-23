@@ -317,6 +317,12 @@ a.site-title {
   font-size: 1.25 * $global-font-size;
 }
 
+.home .intro img {
+    float: right;
+    max-height: 20rem;
+    margin: 0 0 $global-margin $global-margin;
+}
+
 .home #blocks h2 {
   font-size: 1.5 & $global-font-size;
 }

@@ -366,7 +366,7 @@ footer {
 
 .logos .logo {
   text-align: center;
-  @include xy-cell-size(4/12);
+  @include xy-cell-size(3/12);
   max-height: 6 * $global-padding;
 }
 

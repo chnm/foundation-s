@@ -61,29 +61,31 @@ endif;
                 <?php echo $this->content; ?>
             </div>
             <footer>
-                <div class="grid-x grid-margin-x">
-                <?php $footerLogos = [
-                         $this->themeSettingAssetUrl('footer_logo_one') => $this->themeSetting('footer_logo_link_one'),
-                         $this->themeSettingAssetUrl('footer_logo_two') => $this->themeSetting('footer_logo_link_two'),
-                         $this->themeSettingAssetUrl('footer_logo_three') => $this->themeSetting('footer_logo_link_three'),
-                         $this->themeSettingAssetUrl('footer_logo_four') => $this->themeSetting('footer_logo_link_four')
-                    ] ?>
-                    <?php foreach ($footerLogos as $key => $value): ?>
-                        <?php if($value): ?>
-                            <a href="<?php echo $this->escapeHtml($value); ?>"><img src="<?php echo $this->escapeHtml($key); ?>"></a>
-                        <?php elseif($key != null): ?>
-                            <img src="<?php echo $this->escapeHtml($key); ?>">
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-
-                <div class="cell small-12">
-                <?php if ($footerContent = $this->themeSetting('footer')): ?>
-                    <?php echo $footerContent; ?>
-                <?php else: ?>
-                    <?php echo $this->translate('Powered by Omeka S'); ?>
-                <?php endif; ?>
-                </div>
-                </div>
+              <div class="logos">
+                  <?php $footerLogos = [
+                       $this->themeSettingAssetUrl('footer_logo_one') => $this->themeSetting('footer_logo_link_one'),
+                       $this->themeSettingAssetUrl('footer_logo_two') => $this->themeSetting('footer_logo_link_two'),
+                       $this->themeSettingAssetUrl('footer_logo_three') => $this->themeSetting('footer_logo_link_three'),
+                       $this->themeSettingAssetUrl('footer_logo_four') => $this->themeSetting('footer_logo_link_four')
+                  ] ?>
+                  <?php foreach ($footerLogos as $key => $value): ?>
+                      <?php if($value): ?>
+                          <a class="logo" href="<?php echo $this->escapeHtml($value); ?>"><img src="<?php echo $this->escapeHtml($key); ?>"></a>
+                      <?php elseif($key != null): ?>
+                          <img src="<?php echo $this->escapeHtml($key); ?>">
+                      <?php endif; ?>
+                  <?php endforeach; ?>
+            
+                 
+                  
+              </div>
+            
+              <?php if ($footerContent = $this->themeSetting('footer')): ?>
+                  <?php echo $footerContent; ?>
+              <?php else: ?>
+                  <?php echo $this->translate('Powered by Omeka S'); ?>
+              <?php endif; ?>
+              </div>
             </footer>
         </div>
         <script>

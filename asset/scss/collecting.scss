@@ -284,11 +284,11 @@ a.site-title {
   margin-right: .25 * $global-margin;
 }
 
-.resource.show .grid-x {
+.resource.show #content .grid-x {
   flex-direction: row-reverse;
 }
 
-.resource.show .medium-9 {
+.resource.show #content .medium-9 {
   margin-right: auto;
 }
 
@@ -353,4 +353,62 @@ a.site-title {
 
 .item-showcase .resource.item:not(:only-child) img {
   max-height:100% !important;
+}
+
+footer {
+  @include xy-grid-container();
+}
+
+.logos {
+  @include xy-grid();
+  margin-bottom: $global-margin;
+}
+
+.logos .logo {
+  text-align: center;
+  @include xy-cell-size(4/12);
+  max-height: 6 * $global-padding;
+}
+
+@include breakpoint(medium down) {
+  .logos {
+    height: auto;
+  }
+  
+  .logos .logo {
+    @include xy-cell-size(100%);
+  }
+}
+
+.logos .logo img {
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+}
+
+.collecting-these-times-footer {
+  @include xy-grid();
+  margin: (2 * $global-margin) 0;
+  align-items: flex-start;
+}
+
+.footer-links {
+  @include xy-cell-size(7/12);
+  margin-bottom: $global-margin;
+}
+
+footer .rrchnm-logo {
+  margin-left: auto;
+  display: block;
+  text-align: right;
+  
+  img {
+    max-height: 3 * $global-padding;
+  }
+}
+
+@include breakpoint(medium down) {
+  footer .rrchnm-logo {
+    margin-left: 0;    
+  }
 }

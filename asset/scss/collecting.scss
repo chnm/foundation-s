@@ -328,13 +328,7 @@ a.site-title {
 }
 
 .callout {
-  background: repeating-linear-gradient(
-    45deg,
-    #fff,
-    #fff 20px,
-    $button-background-hover 20px,
-    $button-background-hover 21px
-  );
+  border: 3px solid $secondary-color;
   text-align: center;
 
   p {

@@ -62,26 +62,19 @@ endif;
             </div>
             <footer>
                 <div class="grid-x grid-margin-x">
-                <?php if ($footerLogoOne = $this->themeSettingAssetUrl('footer_logo_one')): ?>
-                    <div class="cell auto">
-                        <img src="<?php echo $this->escapeHtml($footerLogoOne); ?>">
-                    </div>
-                <?php endif; ?>
-                <?php if ($footerLogoTwo = $this->themeSettingAssetUrl('footer_logo_two')): ?>
-                    <div class="cell auto">
-                        <img src="<?php echo $this->escapeHtml($footerLogoTwo); ?>">
-                    </div>
-                <?php endif; ?>
-                <?php if ($footerLogoThree = $this->themeSettingAssetUrl('footer_logo_three')): ?>
-                    <div class="cell auto">
-                        <img src="<?php echo $this->escapeHtml($footerLogoThree); ?>">
-                    </div>
-                <?php endif; ?>
-                <?php if ($footerLogoFour = $this->themeSettingAssetUrl('footer_logo_four')): ?>
-                    <div class="cell auto">
-                        <img src="<?php echo $this->escapeHtml($footerLogoFour); ?>">
-                    </div>
-                <?php endif; ?>
+                <?php $footerLogos = [
+                         $this->themeSettingAssetUrl('footer_logo_one') => $this->themeSetting('footer_logo_link_one'),
+                         $this->themeSettingAssetUrl('footer_logo_two') => $this->themeSetting('footer_logo_link_two'),
+                         $this->themeSettingAssetUrl('footer_logo_three') => $this->themeSetting('footer_logo_link_three'),
+                         $this->themeSettingAssetUrl('footer_logo_four') => $this->themeSetting('footer_logo_link_four')
+                    ] ?>
+                    <?php foreach ($footerLogos as $key => $value): ?>
+                        <?php if($value): ?>
+                            <a href="<?php echo $this->escapeHtml($value); ?>"><img src="<?php echo $this->escapeHtml($key); ?>"></a>
+                        <?php else: ?>
+                            <img src="<?php echo $this->escapeHtml($key); ?>">
+                        <?php endif; ?>
+                    <?php endforeach; ?>
 
                 <div class="cell small-12">
                 <?php if ($footerContent = $this->themeSetting('footer')): ?>

@@ -71,7 +71,7 @@ endif;
                     <?php foreach ($footerLogos as $key => $value): ?>
                         <?php if($value): ?>
                             <a href="<?php echo $this->escapeHtml($value); ?>"><img src="<?php echo $this->escapeHtml($key); ?>"></a>
-                        <?php else: ?>
+                        <?php elseif($key != null): ?>
                             <img src="<?php echo $this->escapeHtml($key); ?>">
                         <?php endif; ?>
                     <?php endforeach; ?>

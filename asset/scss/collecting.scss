@@ -103,6 +103,10 @@ a.site-title {
   margin-bottom: 0;
 }
 
+#offcanvas .contribute.button {
+  width: 100%;
+}
+
 .top-bar-left .contribute.button {
   @include show-for(large);
 }

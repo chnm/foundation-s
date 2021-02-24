@@ -146,8 +146,10 @@ a.site-title {
 }
 
 @include breakpoint(small) {
+  .home #blocks,
   #blocks {
     margin: 0;
+    width: 100%;
   }
 }
 
@@ -222,7 +224,6 @@ a.site-title {
 #collecting-together-projects .description {
   margin-bottom: 0;
 }
-
 
 @include breakpoint(medium up) {
   #collecting-together-projects .project-meta {
@@ -344,6 +345,12 @@ a.site-title {
     font-variant: small-caps;
     @include xy-cell-offset(2);
     @include xy-cell(8);
+  }
+}
+
+@include breakpoint(small) {
+  .callout .button {
+    width: auto;
   }
 }
 

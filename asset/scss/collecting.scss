@@ -329,6 +329,12 @@ a.site-title {
     margin: 0 0 $global-margin $global-margin;
 }
 
+@include breakpoint(small) {
+    .home .intro img {
+      max-height: 10rem; 
+    }
+}
+
 .home #blocks h2 {
   font-size: 1.5 & $global-font-size;
 }

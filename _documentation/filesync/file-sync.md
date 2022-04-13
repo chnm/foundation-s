@@ -15,7 +15,7 @@ to
 
 ```omeka_version_constraint = "^3.1.0"```
 
-After you've done this, head to the Module page in the Omeka S admin and finish installing the three modules.
+After you've done this, head to the Module page in the Omeka S admin and finish installing the modules.
 
 ## Preparing for Import
 

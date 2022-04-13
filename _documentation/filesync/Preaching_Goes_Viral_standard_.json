@@ -1,0 +1,355 @@
+{
+    "o:label": "Preaching Goes Viral (standard)",
+    "o:resource_template_property": [
+        {
+            "o:alternate_label": "PGV_ID",
+            "o:alternate_comment": "Unique ID number from PGV database",
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "identifier",
+            "label": "Identifier"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "title",
+            "label": "Title"
+        },
+        {
+            "o:alternate_label": "Media file format such as pdf, mp3, mp4, docx",
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "format",
+            "label": "Format"
+        },
+        {
+            "o:alternate_label": "Timestamp  or date submitted to PGV",
+            "o:alternate_comment": "Timestamp (G-form) or date submitted (such as web-scraping) to PGV, often prior to Omeka",
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "dateSubmitted",
+            "label": "Date Submitted"
+        },
+        {
+            "o:alternate_label": "Email Address",
+            "o:alternate_comment": "Email Address of person submitting",
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "mediator",
+            "label": "Mediator"
+        },
+        {
+            "o:alternate_label": "Genre",
+            "o:alternate_comment": "May change",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [
+                {
+                    "name": "literal",
+                    "label": "Text"
+                }
+            ],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "type",
+            "label": "Type"
+        },
+        {
+            "o:alternate_label": "URL",
+            "o:alternate_comment": "URL of Resource",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [
+                {
+                    "name": "uri",
+                    "label": "URI"
+                }
+            ],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "source",
+            "label": "Source"
+        },
+        {
+            "o:alternate_label": "Religious movement",
+            "o:alternate_comment": "Broad religious groups, denominations, or affiliations. Not individual churches, etc. ",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [
+                {
+                    "name": "literal",
+                    "label": "Text"
+                }
+            ],
+            "vocabulary_namespace_uri": "http:\/\/religiousecologies.org\/vocab#",
+            "vocabulary_label": "MARE",
+            "local_name": "denominationFamilyName",
+            "label": "denomination family name"
+        },
+        {
+            "o:alternate_label": "Religious movement or affiliation",
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/religiousecologies.org\/vocab#",
+            "vocabulary_label": "MARE",
+            "local_name": "denomination",
+            "label": "has denomination"
+        },
+        {
+            "o:alternate_label": "Codes, tags, keywords, and subjects",
+            "o:alternate_comment": "Codes, tags, keywords, and subjects that are associated with an entire item (document or media file).",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [
+                {
+                    "name": "literal",
+                    "label": "Text"
+                }
+            ],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "subject",
+            "label": "Subject"
+        },
+        {
+            "o:alternate_label": "Description or narrative",
+            "o:alternate_comment": "Sharing a personal experience or story. Other discussion and supplemental writing about the item.",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "description",
+            "label": "Description"
+        },
+        {
+            "o:alternate_label": "Author (individual or group)",
+            "o:alternate_comment": "Speaker or author, including groups that are responsible for a source.",
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "creator",
+            "label": "Creator"
+        },
+        {
+            "o:alternate_label": "Religious organization or house of worship [deprecated field]",
+            "o:alternate_comment": "Name of church, synagogue, mosque, organization, or religious institution, if any.",
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "references",
+            "label": "References"
+        },
+        {
+            "o:alternate_label": "Religious organization or house of worship (hc)",
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/religiousecologies.org\/vocab#",
+            "vocabulary_label": "MARE",
+            "local_name": "community",
+            "label": "has community"
+        },
+        {
+            "o:alternate_label": "Religious organization, or house of worship",
+            "o:alternate_comment": "Name of church, synagogue, mosque, organization, or religious institution, if any.",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [
+                {
+                    "name": "literal",
+                    "label": "Text"
+                }
+            ],
+            "vocabulary_namespace_uri": "http:\/\/religiousecologies.org\/vocab#",
+            "vocabulary_label": "MARE",
+            "local_name": "communityName",
+            "label": "community name"
+        },
+        {
+            "o:alternate_label": "Date of Source",
+            "o:alternate_comment": "Date that an author's item is published or sermon delivered",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "created",
+            "label": "Date Created"
+        },
+        {
+            "o:alternate_label": "Location",
+            "o:alternate_comment": "City, state, zip",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "spatial",
+            "label": "Spatial Coverage"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/religiousecologies.org\/vocab#",
+            "vocabulary_label": "MARE",
+            "local_name": "stateTerritoryAbbrName",
+            "label": "state\/territory abbreviated name"
+        },
+        {
+            "o:alternate_label": "Comments and Credits",
+            "o:alternate_comment": "Notes about item collection",
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "abstract",
+            "label": "Abstract"
+        },
+        {
+            "o:alternate_label": "Upload",
+            "o:alternate_comment": "The location in the Google Drive. Alternatively, this may be the Google ID or a link for downloading to G-Drive.",
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [
+                {
+                    "name": "uri",
+                    "label": "URI"
+                }
+            ],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "isFormatOf",
+            "label": "Is Format Of"
+        },
+        {
+            "o:alternate_label": "Google ID",
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "hasFormat",
+            "label": "Has Format"
+        },
+        {
+            "o:alternate_label": "Dedoose ID",
+            "o:alternate_comment": "ID assigned by Dedoose to items (descriptors)",
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "isVersionOf",
+            "label": "Is Version Of"
+        },
+        {
+            "o:alternate_label": "Dovetail ID",
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": true,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "hasVersion",
+            "label": "Has Version"
+        },
+        {
+            "o:alternate_label": "PGV and other Omeka sites",
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/religiousecologies.org\/vocab#",
+            "vocabulary_label": "MARE",
+            "local_name": "originatingInstitution",
+            "label": "has originating institution"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "language",
+            "label": "Language"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "rights",
+            "label": "Rights"
+        },
+        {
+            "o:alternate_label": "Excerpted and highlighted parts",
+            "o:alternate_comment": "Excerpts from Dedoose, highlights from Dovetail, etc.",
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+            "vocabulary_label": "Dublin Core",
+            "local_name": "hasPart",
+            "label": "Has Part"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "data_types": [],
+            "vocabulary_namespace_uri": "http:\/\/purl.org\/spar\/datacite\/",
+            "vocabulary_label": "DataCite",
+            "local_name": "hasDescription",
+            "label": "has description"
+        }
+    ],
+    "o:resource_class": {
+        "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/dcmitype\/",
+        "vocabulary_label": "Dublin Core Type",
+        "local_name": "Dataset",
+        "label": "Dataset"
+    },
+    "o:title_property": {
+        "vocabulary_namespace_uri": "http:\/\/purl.org\/dc\/terms\/",
+        "vocabulary_label": "Dublin Core",
+        "local_name": "title",
+        "label": "Title"
+    }
+}

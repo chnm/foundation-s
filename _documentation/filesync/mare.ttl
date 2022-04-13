@@ -1,0 +1,280 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix mare: <http://religiousecologies.org/vocab#> .
+
+<http://religiousecologies.org/vocab#> a owl:Ontology ;
+    dcterms:title "MARE" .
+
+mare:ArdaReligiousGroupFamily a rdfs:Class ;
+    rdfs:label "ARDA Religious Group Family" ;
+    rdfs:comment "A religious group family defined by the Association of Religion Data Archives (ARDA)" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:CollectingInstitution a rdfs:Class ;
+    rdfs:label "Collecting Institution" ;
+    rdfs:comment "A collecting institution" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:CollectingProject a rdfs:Class ;
+    rdfs:label "Collecting Project" ;
+    rdfs:comment "A collecting project" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:Community a rdfs:Class ;
+    rdfs:label "Community" ;
+    rdfs:comment "A group of people having a particular characteristic in common" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:County a rdfs:Class ;
+    rdfs:label "County" ;
+    rdfs:comment "A United States county" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:Denomination a rdfs:Class ;
+    rdfs:label "Denomination" ;
+    rdfs:comment "A religious denomination" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:DenominationFamily a rdfs:Class ;
+    rdfs:label "Denomination Family" ;
+    rdfs:comment "A religious denomination family defined by the United States Census Bureau." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:OriginatingInstitution a rdfs:Class ;
+    rdfs:label "Originating Institution" ;
+    rdfs:comment "An originating institution." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:Schedule a rdfs:Class ;
+    rdfs:label "Schedule" ;
+    rdfs:comment "A schedule from the U.S. Census of Religious Bodies" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:StateTerritory a rdfs:Class ;
+    rdfs:label "State/Territory" ;
+    rdfs:comment "A United States state/territory." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:affiliation a rdf:Property ;
+    rdfs:label "affiliation" ;
+    rdfs:comment "An affiliation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:ahcbCountyId a rdf:Property ;
+    rdfs:label "AHCB county ID" ;
+    rdfs:comment "A county identifier published by the Atlas of Historical County Boundaries" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:ahcbStateTerritoryId a rdf:Property ;
+    rdfs:label "AHCB state/territory ID" ;
+    rdfs:comment "A state/territory identifier published by the Atlas of Historical County Boundaries." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:box a rdf:Property ;
+    rdfs:label "box" ;
+    rdfs:comment "A box identifier." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:cataloguedBy a rdf:Property ;
+    rdfs:label "cataloged by" ;
+    rdfs:comment "An agent responsible for cataloging this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:categoricalFocus a rdf:Property ;
+    rdfs:label "categorical focus" ;
+    rdfs:comment "The categorical focus of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:collectingUrl a rdf:Property ;
+    rdfs:label "collecting URL" ;
+    rdfs:comment "The URL where resources are collected." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:collectionUrl a rdf:Property ;
+    rdfs:label "collection URL" ;
+    rdfs:comment "The URL where collected resources are available." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:communityName a rdf:Property ;
+    rdfs:label "community name" ;
+    rdfs:comment "A community name." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:countryName a rdf:Property ;
+    rdfs:label "country name" ;
+    rdfs:comment "A country name." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:countyName a rdf:Property ;
+    rdfs:label "county name" ;
+    rdfs:comment "A county name." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:digitized a rdf:Property ;
+    rdfs:label "date digitized" ;
+    rdfs:comment "A date of the digitization of a resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:denominationFamilyName a rdf:Property ;
+    rdfs:label "denomination family name" ;
+    rdfs:comment "A denomination family name." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:denominationId a rdf:Property ;
+    rdfs:label "denomination ID" ;
+    rdfs:comment "A denomination identifier." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:digitizedBy a rdf:Property ;
+    rdfs:label "digitized by" ;
+    rdfs:comment "An agent responsible for digitizing this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:fipsCountyCode a rdf:Property ;
+    rdfs:label "FIPS county code" ;
+    rdfs:comment "A county code published by the Federal Information Processing Standard." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:geographicalFocus a rdf:Property ;
+    rdfs:label "geographical focus" ;
+    rdfs:comment "The geographical focus of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:ardaReligiousGroupFamily a rdf:Property ;
+    rdfs:label "has ARDA religious group family" ;
+    rdfs:comment "The ARDA religious group family of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:community a rdf:Property ;
+    rdfs:label "has community" ;
+    rdfs:comment "The community of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:county a rdf:Property ;
+    rdfs:label "county" ;
+    rdfs:comment "The county of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:denomination a rdf:Property ;
+    rdfs:label "denomination" ;
+    rdfs:comment "The denomination of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:denominationFamily a rdf:Property ;
+    rdfs:label "has denomination family" ;
+    rdfs:comment "The denomination family of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:originatingInstitution a rdf:Property ;
+    rdfs:label "has originating institution" ;
+    rdfs:comment "The institution from where this resource originates." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:stateTerritory a rdf:Property ;
+    rdfs:label "has state/territory" ;
+    rdfs:comment "The state/territory of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:imageOriginalPath a rdf:Property ;
+    rdfs:label "image original path" ;
+    rdfs:comment "An original path of an image." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:imageRecheck a rdf:Property ;
+    rdfs:label "image recheck" ;
+    rdfs:comment "An indication that an image should be rechecked." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:materialFocus a rdf:Property ;
+    rdfs:label "material focus" ;
+    rdfs:comment "The material focus of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:notes a rdf:Property ;
+    rdfs:label "notes" ;
+    rdfs:comment "Notes for this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:populatedPlaceName a rdf:Property ;
+    rdfs:label "populated place name" ;
+    rdfs:comment "A populated place name." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:scheduleId a rdf:Property ;
+    rdfs:label "schedule ID" ;
+    rdfs:comment "A schedule identifier." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:stateTerritoryAbbrName a rdf:Property ;
+    rdfs:label "state/territory abbreviated name" ;
+    rdfs:comment "A state/territory abbreviated name." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:stateTerritoryFullName a rdf:Property ;
+    rdfs:label "state/territory full name" ;
+    rdfs:comment "A state/territory full name." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:stateTerritoryName a rdf:Property ;
+    rdfs:label "state/territory name" ;
+    rdfs:comment "A state/territory name." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:stateTerritoryTerritoryType a rdf:Property ;
+    rdfs:label "state/territory territory type" ;
+    rdfs:comment "A state/territory territory type." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+mare:summary a rdf:Property ;
+    rdfs:label "summary" ;
+    rdfs:comment "A summary of this resource." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
